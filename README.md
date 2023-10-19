@@ -11,6 +11,10 @@ Provide audience the possibility to create a very simple network configuration t
 5. MR -> Create SSIDs
 
 ## Bonus Mission:
+**Option 1**
+- Dropdown list to share config with other non-API users
+
+**Option 2**
 Write a script to verify that the config correctly matches the desired one. For example, in wifi, many times users configure the wrong AP RF profile, and then they have wifi problems
 
 For example:
