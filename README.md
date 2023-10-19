@@ -17,9 +17,8 @@ Provide audience the possibility to create a very simple network configuration t
 **Option 2**
 
 Write a script to verify that the config correctly matches the desired one (linked to previous mission of Thousand Eyes)
-For example, in wifi, many times users configure the wrong AP RF profile, and then they have wifi problems
 
-For example:
+For example, in wifi, many times users configure the wrong AP RF profile, and then they have wifi problems. Template we could use:
 - https://github.com/obrigg/meraki-health-check
 - https://github.com/obrigg/meraki-channel-distribution
 
