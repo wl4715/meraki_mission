@@ -24,4 +24,5 @@ For example:
 - https://github.com/obrigg/meraki-channel-distribution
 
 **Option 3**
-Catalyst monitoring in the Meraki Dashbaord
+
+Use APIs for Catalyst monitoring in the Meraki Dashbaord (power of the platform)
