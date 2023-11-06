@@ -11,14 +11,13 @@ Provide audience the possibility to create a very simple network configuration t
 5. MR -> Create SSIDs
 
 ## Bonus Mission:
-**Option 1 - Flask or config file to use the tempalte more seamlessly**
-- Dropdown list to share config with other non-API users
 
-**Option 2 - Test Driven Automation**
+**'Test Driven Automation**
 
-Write a script to verify that the config correctly matches the desired one (linked to previous mission of Thousand Eyes)
+Write a script to verify that the config correctly matches the desired one (linked to previous mission of Thousand Eyes).
+Input what the desired configuration should be and check with script if the org matches it.
 
-For example, in wifi, many times users configure the wrong AP RF profile, and then they have wifi problems. Template we could use:
+Other examples out there, in wifi, many times users configure the wrong AP RF profile, and then they have wifi problems. Template we could use:
 - https://github.com/obrigg/meraki-health-check
 - https://github.com/obrigg/meraki-channel-distribution
 
