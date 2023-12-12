@@ -314,3 +314,153 @@ response = requests.request("PUT", url, headers=headers, data=payload)
 
 print(response.text)
 
+# STEP 6: UPDATE CAMERA QUALITY & RETENTION SETTINGS
+
+url = "https://api.meraki.com/api/v1/devices//camera/qualityAndRetention"
+
+payload = json.dumps({
+  "profileId": "<string>",
+  "motionBasedRetentionEnabled": "<boolean>",
+  "audioRecordingEnabled": "<boolean>",
+  "restrictedBandwidthModeEnabled": "<boolean>",
+  "quality": "<string>",
+  "resolution": "<string>",
+  "motionDetectorVersion": "<integer>"
+})
+headers = {
+  'X-Cisco-Meraki-API-Key': '{{X-Cisco-Meraki-API-Key}}',
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("PUT", url, headers=headers, data=payload)
+
+print(response.text)
+
+# STEP 7: CREATE SENSOR PROFILE
+
+url = "https://api.meraki.com/api/v1/networks/{{networkId}}/sensor/alerts/profiles"
+
+payload = json.dumps({
+  "name": "<string>",
+  "conditions": [
+    {
+      "metric": "<string>",
+      "threshold": {
+        "temperature": {
+          "celsius": "<float>",
+          "fahrenheit": "<float>",
+          "quality": "<string>"
+        },
+        "humidity": {
+          "relativePercentage": "<integer>",
+          "quality": "<string>"
+        },
+        "water": {
+          "present": "<boolean>"
+        },
+        "door": {
+          "open": "<boolean>"
+        },
+        "tvoc": {
+          "concentration": "<integer>",
+          "quality": "<string>"
+        },
+        "pm25": {
+          "concentration": "<integer>",
+          "quality": "<string>"
+        },
+        "noise": {
+          "ambient": {
+            "level": {
+              "value": "<Error: Too many levels of nesting to fake this schema>"
+            },
+            "quality": {
+              "value": "<Error: Too many levels of nesting to fake this schema>"
+            }
+          }
+        },
+        "indoorAirQuality": {
+          "score": "<integer>",
+          "quality": "<string>"
+        }
+      },
+      "direction": "<string>",
+      "duration": 0
+    },
+    {
+      "metric": "<string>",
+      "threshold": {
+        "temperature": {
+          "celsius": "<float>",
+          "fahrenheit": "<float>",
+          "quality": "<string>"
+        },
+        "humidity": {
+          "relativePercentage": "<integer>",
+          "quality": "<string>"
+        },
+        "water": {
+          "present": "<boolean>"
+        },
+        "door": {
+          "open": "<boolean>"
+        },
+        "tvoc": {
+          "concentration": "<integer>",
+          "quality": "<string>"
+        },
+        "pm25": {
+          "concentration": "<integer>",
+          "quality": "<string>"
+        },
+        "noise": {
+          "ambient": {
+            "level": {
+              "value": "<Error: Too many levels of nesting to fake this schema>"
+            },
+            "quality": {
+              "value": "<Error: Too many levels of nesting to fake this schema>"
+            }
+          }
+        },
+        "indoorAirQuality": {
+          "score": "<integer>",
+          "quality": "<string>"
+        }
+      },
+      "direction": "<string>",
+      "duration": 0
+    }
+  ],
+  "schedule": {
+    "id": "<string>"
+  },
+  "recipients": {
+    "emails": [
+      "<string>",
+      "<string>"
+    ],
+    "smsNumbers": [
+      "<string>",
+      "<string>"
+    ],
+    "httpServerIds": [
+      "<string>",
+      "<string>"
+    ]
+  },
+  "serials": [
+    "<string>",
+    "<string>"
+  ]
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'Authorization': 'Bearer 4854372bf7b61bdb701512314e3134bcb3e61b85'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
